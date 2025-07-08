@@ -1,0 +1,87 @@
+/* Fuente futurista desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0d0d0d;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 30px;
+  text-align: center;
+}
+
+h1 {
+  color: #b400ff;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px #b400ff;
+}
+
+p {
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.button_container {
+  margin: 15px;
+}
+
+.button {
+  background: linear-gradient(145deg, #1a1a1a, #2a0033);
+  border: 2px solid #b400ff;
+  border-radius: 10px;
+  padding: 15px 30px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  box-shadow: 0 0 10px #b400ff55;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #b400ff;
+}
+
+input, button {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  margin: 10px;
+}
+
+input {
+  width: 250px;
+}
+
+button {
+  background-color: #b400ff;
+  color: white;
+  cursor: pointer;
+}
+
+.reto-contenedor {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resultado {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.valido {
+  color: #00ff88;
+}
+
+.invalido,
+.error {
+  color: #ff0044;
+}

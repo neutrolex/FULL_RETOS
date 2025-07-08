@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reto 5 - Calcular Descuento</title>
+  <link rel="stylesheet" href="../css/index.css" />
+  <style>
+    .container {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      margin: 10px;
+    }
+
+    input {
+      width: 200px;
+    }
+
+    button {
+      background-color: #b400ff;
+      color: white;
+      cursor: pointer;
+    }
+
+    .resultado {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #00ff88;
+    }
+
+    .error {
+      color: #ff0044;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🔴 Reto 5: Calcular Descuento</h1>
+    <p>“Como cliente quiero saber el precio con descuento aplicado.”</p>
+
+    <input type="number" id="precio" placeholder="Precio original" />
+    <input type="number" id="descuento" placeholder="Descuento (%)" />
+    <br />
+    <button onclick="calcular()">Calcular</button>
+
+    <div class="resultado" id="resultado"></div>
+
+    <br /><a class="button" href="../index.html">⬅️ Volver</a>
+  </div>
+
+  <script>
+    function aplicar_descuento(precio, porcentaje) {
+      return precio - (precio * porcentaje / 100);
+    }
+
+    function calcular() {
+      const precio = parseFloat(document.getElementById("precio").value);
+      const descuento = parseFloat(document.getElementById("descuento").value);
+      const resultado = document.getElementById("resultado");
+
+      if (isNaN(precio) || isNaN(descuento) || precio < 0 || descuento < 0) {
+        resultado.textContent = "❌ Ingresa valores válidos (positivos).";
+        resultado.className = "resultado error";
+        return;
+      }
+
+      const final = aplicar_descuento(precio, descuento).toFixed(2);
+      resultado.textContent = `✅ Precio final con descuento: S/ ${final}`;
+      resultado.className = "resultado";
+    }
+  </script>
+</body>
+</html>

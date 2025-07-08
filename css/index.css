@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+:root {
+  --fondo: #0d0d0d;
+  --purpura: #b400ff;
+  --purpura-claro: #e100ff;
+  --verde: #00ff88;
+  --rojo: #ff0044;
+  --sombra: 0 0 15px var(--purpura-claro);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background-color: var(--fondo);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1 {
+  color: var(--purpura);
+  margin-bottom: 30px;
+  text-shadow: 0 0 12px var(--purpura-claro);
+  font-size: 2.5rem;
+}
+
+p {
+  max-width: 600px;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.button_container {
+  margin: 25px;
+}
+
+.button {
+  background: linear-gradient(145deg, #1a1a1a, #2a0033);
+  border: 2px solid var(--purpura);
+  border-radius: 10px;
+  padding: 15px 30px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  box-shadow: 0 0 10px #b400ff55;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: var(--sombra);
+}
+
+input, button {
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  margin: 10px;
+  outline: none;
+  background-color: #1a1a1a;
+  color: #fff;
+  border: 1px solid var(--purpura);
+  box-shadow: 0 0 6px #b400ff33;
+  transition: all 0.3s ease;
+}
+
+input:focus, button:hover {
+  box-shadow: 0 0 10px var(--purpura);
+  border-color: var(--purpura-claro);
+}
+
+input {
+  width: 260px;
+}
+
+.reto-contenedor {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resultado {
+  font-size: 18px;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  min-height: 24px;
+}
+
+.valido {
+  color: var(--verde);
+  text-shadow: 0 0 4px var(--verde);
+}
+
+.invalido,
+.error {
+  color: var(--rojo);
+  text-shadow: 0 0 4px var(--rojo);
+}
