@@ -10,10 +10,10 @@ function validar() {
   const resultado = document.getElementById("resultado");
 
   if (validar_password(pass)) {
-    resultado.textContent = "✅ Contraseña válida.";
+    resultado.textContent = "✅ True";
     resultado.className = "resultado valido";
   } else {
-    resultado.textContent = "❌ Contraseña inválida. Debe tener al menos 6 caracteres, una letra y un número.";
+    resultado.textContent = "❌ False";
     resultado.className = "resultado invalido";
   }
 }
